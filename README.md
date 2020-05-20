@@ -1,13 +1,13 @@
 # Symfony-4.4
 
-Cloner le répository
-Faire un composer install
-Faire un yarn install
-Faire un yarn encore dev
-Dupliquer le fichier .env et le nommer .env.local et changer les informations de la base de données
+Cloner le répository<br/>
+Faire un composer install<br/>
+Faire un yarn install<br/>
+Faire un yarn encore dev<br/>
+Dupliquer le fichier .env et le nommer .env.local et changer les informations de la base de données<br/>
 
 # Bundle
 
-Webpack encore : Bootstrap JQuery
-Fixture : Ajout de contenu dans la BDD
-Faker : Génération de fausses données
+Webpack encore : Bootstrap JQuery<br/>
+Fixture : Ajout de contenu dans la BDD<br/>
+Faker : Génération de fausses données<br/>
