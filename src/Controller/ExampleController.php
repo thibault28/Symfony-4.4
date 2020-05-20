@@ -54,4 +54,13 @@ class ExampleController extends AbstractController
             '<html><body>Email Send</body></html>'
         );
     }
+    /**
+     * @Route("/translate", name="translate")
+     */
+    public function translate()
+    {
+
+        return $this->render('example/translate.html.twig', [
+        ]);
+    }
 }

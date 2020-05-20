@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Translate!{% endblock %}
+
+{% block body %}
+
+{% for locale in locales %}
+{% if locale != app.request.locale %}
+<a href="{{ path('change_locale', {'locale': locale}) }}" class="ml-5">{{ locale }}</a>         
+{% endif %}
+{% endfor %}
+
+<br>
+
+<p class="ml-5">{{ 'hello'|trans }}</p>
+
+
+{% endblock %}

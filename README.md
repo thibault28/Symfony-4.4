@@ -26,3 +26,8 @@ KnpPaginator : Pagination<br/>
 /admin : Administration<br/>
 /example : Tous les exemples avec pagination<br/>
 /example/email : Envoie email<br/>
+/example/translate : Traduction site<br/>
+
+# Info
+Pour rajouter une langue, le faire dans config/services.yaml<br/>
+
