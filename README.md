@@ -15,6 +15,7 @@ Fixture : Ajout de contenu dans la BDD<br/>
 Faker : Génération de fausses données<br/>
 SwiftMailer : Envoie de mail<br/>
 EasyAdmin : Administration<br/>
+KnpPaginator : Pagination<br/>
 
 # Pages
 
@@ -23,4 +24,5 @@ EasyAdmin : Administration<br/>
 /login : Connexion<br/>
 /logout : Déconnexion<br/>
 /admin : Administration<br/>
+/example : Tous les exemples avec pagination<br/>
 /example/email : Envoie email<br/>
