@@ -23,6 +23,12 @@
 
                     {% if app.user %}
 
+                    {% if is_granted("ROLE_ADMIN") %}
+                    <a class="dropdown-item" href="{{path('easyadmin')}}">Admin</a>
+
+
+                    {% endif %}
+
                     <a class="dropdown-item" href="{{path('app_logout')}}">Se déconnecter</a>
 
                     {% else %}

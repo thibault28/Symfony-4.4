@@ -14,11 +14,13 @@ Webpack encore : Bootstrap JQuery<br/>
 Fixture : Ajout de contenu dans la BDD<br/>
 Faker : Génération de fausses données<br/>
 SwiftMailer : Envoie de mail<br/>
+EasyAdmin : Administration<br/>
 
 # Pages
 
-/ : Accueil
-/register : Inscription
-/login : Connexion
-/logout : Déconnexion
-/example/email : Envoie email
+/ : Accueil<br/>
+/register : Inscription<br/>
+/login : Connexion<br/>
+/logout : Déconnexion<br/>
+/admin : Administration<br/>
+/example/email : Envoie email<br/>

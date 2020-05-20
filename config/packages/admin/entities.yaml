@@ -1,0 +1,8 @@
+easy_admin:
+  entities:
+    Example:
+      class: App\Entity\Example
+    User:
+      class: App\Entity\User
+      form:
+        fields: { property: "email" }

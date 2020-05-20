@@ -1,0 +1,12 @@
+easy_admin:
+  design:
+    menu:
+      - label: "Site"
+        icon: "newspaper-o"
+        children:
+          - { entity: "Example", icon: newspaper-o, label: "Example" }
+
+      - label: "User"
+        icon: "user-circle"
+        children:
+          - { entity: "User", icon: user-circle, label: "User" }
