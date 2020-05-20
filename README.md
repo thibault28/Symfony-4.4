@@ -16,6 +16,7 @@ Faker : Génération de fausses données<br/>
 SwiftMailer : Envoie de mail<br/>
 EasyAdmin : Administration<br/>
 KnpPaginator : Pagination<br/>
+Phpspreadsheet : Excel<br/>
 
 # Pages
 
@@ -27,6 +28,7 @@ KnpPaginator : Pagination<br/>
 /example : Tous les exemples avec pagination<br/>
 /example/email : Envoie email<br/>
 /example/translate : Traduction site<br/>
+/example/excel : Télécharger une feuille excel<br/>
 
 # Info
 Pour rajouter une langue, le faire dans config/services.yaml<br/>
