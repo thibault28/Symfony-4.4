@@ -11,3 +11,8 @@ Dupliquer le fichier .env et le nommer .env.local et changer les informations de
 Webpack encore : Bootstrap JQuery<br/>
 Fixture : Ajout de contenu dans la BDD<br/>
 Faker : Génération de fausses données<br/>
+SwiftMailer : Envoie de mail
+
+# Pages
+
+/example/email : Envoie email
