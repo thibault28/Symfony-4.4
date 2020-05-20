@@ -65,7 +65,7 @@
             {% endblock menu_item %}
         {% endfor %}
     {% endblock main_menu %}
-    <a href="{{path('homepage')}} ">Retour au site</a>
+    <a href="{{path('homepage')}} ">{{ 'BackToSite'|trans(domain = 'Admin') }}</a>
 </ul>
 
 {% block main_menu_after %}{% endblock %}
