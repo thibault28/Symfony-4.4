@@ -40,6 +40,8 @@ class SecurityController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
+            $this->addFlash('success', 'You are registered now log in');
+
             // do anything else you need here, like send an email
 
             return $this->redirectToRoute('homepage');
