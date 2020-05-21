@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Dompdf\Dompdf;
 
 /**
  * @Route("/example")
@@ -34,6 +35,7 @@ class ExampleController extends AbstractController
             'examples' => $examples,
         ]);
     }
+
     /**
      * @Route("/email", name="example_email")
      */
@@ -57,15 +59,35 @@ class ExampleController extends AbstractController
             '<html><body>Email Send</body></html>'
         );
     }
+
     /**
      * @Route("/translate", name="translate")
      */
     public function translate()
     {
 
-        return $this->render('example/translate.html.twig', [
-        ]);
+        return $this->render('example/translate.html.twig', []);
     }
+
+    /**
+     * @Route("/pdf", name="pdf")
+     */
+    public function pdf()
+    {
+        $dompdf = new DOMPDF();
+
+        $html = ob_get_clean();
+        $html .= $html = $this->renderView('example/pdf.html.twig', []);
+
+        $dompdf->load_html($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+        //Attachment => true Téléchargement
+        //Attachment => false Vue dans le navigateur
+
+        $dompdf->stream("test.pdf", ["Attachment" => false]);
+    }
+
     /**
      * @Route("/excel", name="excel")
      */
@@ -73,22 +95,22 @@ class ExampleController extends AbstractController
     {
 
         $spreadsheet = new Spreadsheet();
-        
+
         /* @var $sheet \PhpOffice\PhpSpreadsheet\Writer\Xlsx\Worksheet */
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->setCellValue('A1', 'Hello World !');
         $sheet->setTitle("My First Worksheet");
-        
+
         // Create your Office 2007 Excel (XLSX Format)
         $writer = new Xlsx($spreadsheet);
-        
+
         // Create a Temporary file in the system
         $fileName = 'my_first_excel_symfony4.xlsx';
         $temp_file = tempnam(sys_get_temp_dir(), $fileName);
-        
+
         // Create the excel file in the tmp directory of the system
         $writer->save($temp_file);
-        
+
         // Return the excel file as an attachment
         return $this->file($temp_file, $fileName, ResponseHeaderBag::DISPOSITION_INLINE);
     }

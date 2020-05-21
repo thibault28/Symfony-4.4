@@ -17,6 +17,7 @@ SwiftMailer : Envoie de mail<br/>
 EasyAdmin : Administration<br/>
 KnpPaginator : Pagination<br/>
 Phpspreadsheet : Excel<br/>
+Dompdf : PDF<br/>
 
 # Pages
 
@@ -28,8 +29,9 @@ Phpspreadsheet : Excel<br/>
 /example : Tous les exemples avec pagination<br/>
 /example/email : Envoie email<br/>
 /example/translate : Traduction site<br/>
+/example/pdf : Affiche un PDF<br/>
 /example/excel : Télécharger une feuille excel<br/>
 
 # Info
-Pour rajouter une langue, le faire dans config/services.yaml<br/>
 
+Pour rajouter une langue, le faire dans config/services.yaml<br/>

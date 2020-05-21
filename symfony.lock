@@ -90,6 +90,9 @@
     "doctrine/reflection": {
         "version": "1.2.1"
     },
+    "dompdf/dompdf": {
+        "version": "v0.8.5"
+    },
     "easycorp/easyadmin-bundle": {
         "version": "2.0",
         "recipe": {
@@ -139,6 +142,12 @@
     "pagerfanta/pagerfanta": {
         "version": "v2.1.3"
     },
+    "phenx/php-font-lib": {
+        "version": "0.5.2"
+    },
+    "phenx/php-svg-lib": {
+        "version": "v0.3.3"
+    },
     "php": {
         "version": "7.3"
     },
@@ -168,6 +177,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "sabberworm/php-css-parser": {
+        "version": "8.3.0"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
