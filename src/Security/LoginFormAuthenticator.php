@@ -19,6 +19,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use Symfony\Component\Security\Guard\PasswordAuthenticatedInterface;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
+use Symfony\Component\Translation\Translator;
 
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements PasswordAuthenticatedInterface
 {
@@ -67,17 +68,21 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
             throw new InvalidCsrfTokenException();
         }
 
+        $request = new Request();
+
+        $translator = new Translator($request->getLocale());
+
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]);
 
         $active = $this->entityManager->getRepository(User::class)->findActiveByEmail([$credentials['email']]);
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException($translator->trans('Invalid credentials.'));
         }
         if (!$active) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Account disable');
+            throw new CustomUserMessageAuthenticationException($translator->trans('Account is disabled.'));
         }
 
         return $user;
