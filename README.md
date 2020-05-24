@@ -6,7 +6,7 @@ Faire un yarn install<br/>
 Faire un yarn encore dev<br/>
 Creer la BDD<br/>
 Dupliquer le fichier .env et le nommer .env.local et changer les informations de la base de données et les infos pour envoyer un email<br/>
-Faire un php bin/console doctrine:schema:updat --force<br/>
+Faire un php bin/console doctrine:schema:update --force<br/>
 Faire un php bin/console doctrine:fixtures:load pour mettre des données dans la BDD<br/>
 Lancer le server en faisant un symfony server:start<br/>
 
