@@ -41,6 +41,11 @@ class User implements UserInterface
      */
     private $plainPassword;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isActive = 1;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -133,6 +138,18 @@ class User implements UserInterface
     public function setPlainPassword(string $plainPassword): User
     {
         $this->plainPassword = $plainPassword;
+        return $this;
+    }
+
+    public function getIsActive(): ?bool
+    {
+        return $this->isActive;
+    }
+
+    public function setIsActive(bool $isActive): self
+    {
+        $this->isActive = $isActive;
+
         return $this;
     }
 }

@@ -20,3 +20,4 @@ easy_admin:
               expanded: true
               multiple: true
               choices: { "User": "ROLE_USER", "Administrateur": "ROLE_ADMIN" }
+          - { property: "isActive" }
