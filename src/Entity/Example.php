@@ -29,7 +29,7 @@ class Example
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $image;

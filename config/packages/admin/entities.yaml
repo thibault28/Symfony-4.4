@@ -4,5 +4,19 @@ easy_admin:
       class: App\Entity\Example
     User:
       class: App\Entity\User
+      # Notre controller spécifique
+      controller: App\Controller\Admin\User\UserAdminController
       form:
-        fields: { property: "email" }
+        fields:
+          - { property: "email" }
+          - property: "plainPassword"
+            type: "password"
+            type_options: { required: false }
+            label: "Password"
+          - property: "roles"
+            type: "choice"
+            type_options:
+              mapped: true
+              expanded: true
+              multiple: true
+              choices: { "User": "ROLE_USER", "Administrateur": "ROLE_ADMIN" }
