@@ -42,9 +42,10 @@ email : user@user.fr<br/>
 password : user <br/><br/><br/>
 
 email : admin@admin.fr<br/>
-password : admin
+password : admin<br/>
 
 # Info
 
 Pour modifier l'administration, le faire dans config/admin<br/>
+Pour modifier la langue par défaut, le faire dans config/packages/translation.yml et dans src\EventSubscriber\LocaleSubscriber.php<br/>
 Pour rajouter une langue, le faire dans config/services.yaml<br/>
