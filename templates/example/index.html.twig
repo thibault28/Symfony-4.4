@@ -5,25 +5,27 @@
 {% block body %}
 
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-      </tr>
-    </thead>
-    <tbody>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
 
-        {% for example in examples %}
-        <tr>
-          <th scope="row">{{example.id}} </th>
-          <td>{{example.name}} </td>
-        </tr>
-        {% endfor %}
+    {% for example in examples %}
+    <tr>
+      <th scope="row">{{example.id}} </th>
+      <td>{{example.name}} </td>
+      <td> <img src="{{ vich_uploader_asset(example, 'file')}}" class="w-25" alt="Pas d'image"></td>
+    </tr>
+    {% endfor %}
 
-    </tbody>
-  </table>
-  <div class="pagination">
-    {{ knp_pagination_render(examples) }}
+  </tbody>
+</table>
+<div class="pagination">
+  {{ knp_pagination_render(examples) }}
 </div>
 
 {% endblock %}

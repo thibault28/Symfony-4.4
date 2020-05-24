@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Example;
+use App\Form\ExampleType;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Knp\Component\Pager\PaginatorInterface;
@@ -35,6 +36,33 @@ class ExampleController extends AbstractController
             'examples' => $examples,
         ]);
     }
+
+    /**
+     * @Route("/add", name="add")
+     */
+    public function add(Request $request)
+    {
+
+        $examples = new Example();
+        $form = $this->createForm(ExampleType::class, $examples);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+
+            $em = $this->getDoctrine()->getManager();
+
+            $em->persist($examples);
+            $em->flush();
+
+            return $this->redirectToRoute('example');
+        }
+
+        return $this->render('example/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
 
     /**
      * @Route("/email", name="example_email")

@@ -18,6 +18,7 @@ EasyAdmin : Administration<br/>
 KnpPaginator : Pagination<br/>
 Phpspreadsheet : Excel<br/>
 Dompdf : PDF<br/>
+VichUploaderBundle : Upload<br/>
 
 # Pages
 
@@ -27,6 +28,7 @@ Dompdf : PDF<br/>
 /logout : Déconnexion<br/>
 /admin : Administration<br/>
 /example : Tous les exemples avec pagination<br/>
+/example/add : Ajout d'un exemple avec upload de fichier<br/>
 /example/email : Envoie email<br/>
 /example/translate : Traduction site<br/>
 /example/pdf : Affiche un PDF<br/>

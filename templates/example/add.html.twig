@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add Example{% endblock %}
+
+{% block body %}
+
+{{form_start(form)}}
+{{form_widget(form)}}
+<input class="btn btn-primary" type="submit" value="Send">
+{{form_end(form)}}
+
+{% endblock %}
