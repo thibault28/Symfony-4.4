@@ -2,6 +2,10 @@ easy_admin:
   entities:
     Example:
       class: App\Entity\Example
+      list:
+        fields:
+          - { property: 'name'}
+          - { property: 'image', type: 'image', base_path: '/uploads/examples' }
       form:
         fields:
           - { property: 'name'}
