@@ -2,6 +2,10 @@ easy_admin:
   entities:
     Example:
       class: App\Entity\Example
+      form:
+        fields:
+          - { property: 'name'}
+          - { property: "file", type: 'file'}
     User:
       class: App\Entity\User
       # Notre controller spécifique
